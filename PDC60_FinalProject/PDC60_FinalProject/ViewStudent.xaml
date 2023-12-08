@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC60_FinalProject.ViewStudent">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Student Information" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,10,0,20"/>
+            <Label x:Name="IdLabel" FontAttributes="Bold" />
+            <Label x:Name="GradeLevelLabel" FontAttributes="Bold" />
+            <Label x:Name="FirstNameLabel" />
+            <Label x:Name="LastNameLabel" />
+            <Label x:Name="DateOfBirthLabel" />
+            <Label x:Name="EmailLabel" />
+            <Label x:Name="PhoneLabel" />
+            <Label x:Name="AddressLabel" />
+
+            <Button Text="Edit Details" Clicked="OnEditStudentDetailsClicked" HorizontalOptions="Center" Margin="10"/>
+            <!-- Button for adding academic history -->
+            <Button Text="Add Academic History" Clicked="OnAddAcademicHistoryClicked" HorizontalOptions="End" Margin="10"/>
+
+            <!-- ListView to display academic history -->
+            <ListView x:Name="AcademicHistoryListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding school}" Detail="{Binding history}">
+                            <TextCell.ContextActions>
+                                <MenuItem Text="Edit" Clicked="OnEditClicked"/>
+                                <MenuItem Text="Delete" Clicked="OnDeleteClicked" CommandParameter="{Binding .}"/>
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="AttendanceListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding attendance_date}" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="{Binding status}" HorizontalOptions="EndAndExpand"/>
+                            </Grid>
+
+                            <ViewCell.ContextActions>
+                                <!-- Edit Action -->
+                                <MenuItem Text="Edit" CommandParameter="{Binding .}" Clicked="OnEditAttendanceClicked" />
+
+                                <!-- Delete Action -->
+                                <MenuItem Text="Delete" CommandParameter="{Binding .}" Clicked="OnDeleteAttendanceClicked" />
+                            </ViewCell.ContextActions>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

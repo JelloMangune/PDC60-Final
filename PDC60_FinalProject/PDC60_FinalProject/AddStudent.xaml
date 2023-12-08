@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC60_FinalProject.AddStudent">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker x:Name="YearLevelPicker"
+                    Title="Select Year Level"
+                    SelectedIndexChanged="OnYearLevelSelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry Placeholder="First Name" x:Name="FirstNameEntry" />
+            <Entry Placeholder="Last Name" x:Name="LastNameEntry" />
+            <Label Text="Date of Birth" />
+            <DatePicker x:Name="DateOfBirthPicker" />
+            <Entry Placeholder="Email" x:Name="EmailEntry" Keyboard="Email" />
+            <Entry Placeholder="Phone" x:Name="PhoneEntry" />
+            <Editor Placeholder="Address" x:Name="AddressEntry"/>
+            <Button Text="Add Student" Clicked="OnAddStudentClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
