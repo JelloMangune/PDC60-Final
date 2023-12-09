@@ -23,3 +23,4 @@ C:\VStudio\projects\PDC60_FinalProject\PDC60_FinalProject\PDC60_FinalProject\obj
 C:\VStudio\projects\PDC60_FinalProject\PDC60_FinalProject\PDC60_FinalProject\obj\Debug\netstandard2.0\AddAttendance.xaml.g.cs
 C:\VStudio\projects\PDC60_FinalProject\PDC60_FinalProject\PDC60_FinalProject\obj\Debug\netstandard2.0\EditAttendance.xaml.g.cs
 C:\VStudio\projects\PDC60_FinalProject\PDC60_FinalProject\PDC60_FinalProject\obj\Debug\netstandard2.0\LoginPage.xaml.g.cs
+C:\VStudio\projects\PDC60_FinalProject\PDC60_FinalProject\PDC60_FinalProject\obj\Debug\netstandard2.0\CarouselPage.xaml.g.cs

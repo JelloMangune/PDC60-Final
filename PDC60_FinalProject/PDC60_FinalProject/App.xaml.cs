@@ -10,7 +10,7 @@ namespace PDC60_FinalProject
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new CarouselPage());
         }
 
         protected override void OnStart()
