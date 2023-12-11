@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC60_FinalProject.EditClass">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Course Name" />
+            <Entry x:Name="ClassNameEntry" Placeholder="Enter course name" />
+
+            <!-- Add more input fields for other class details as needed -->
+
+            <Button Text="Update Course" Clicked="OnUpdateClassClicked" />  
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
