@@ -15,8 +15,8 @@ namespace PDC60_FinalProject
     public partial class EditAttendance : ContentPage
     {
         private string attendanceId;
-        public const string attendance_update = "http://172.26.80.1/pdc60-final/attendance-update.php";
-        public const string attendance_searchId = "http://172.26.80.1/pdc60-final/attendance-searchID.php";
+        public const string attendance_update = "http://192.168.100.170/pdc60-final/attendance-update.php";
+        public const string attendance_searchId = "http://192.168.100.170/pdc60-final/attendance-searchID.php";
         public EditAttendance(string attendanceId)
         {
             InitializeComponent();

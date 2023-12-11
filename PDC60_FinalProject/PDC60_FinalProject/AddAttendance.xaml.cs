@@ -15,8 +15,8 @@ namespace PDC60_FinalProject
     public partial class AddAttendance : ContentPage
     {
         private List<AttendanceRecord> attendanceRecords = new List<AttendanceRecord>();
-        public const string attendance_add = "http://172.26.80.1/pdc60-final/attendance-add.php";
-        public const string class_update = "http://172.26.80.1/pdc60-final/class-students.php";
+        public const string attendance_add = "http://192.168.100.170/pdc60-final/attendance-add.php";
+        public const string class_update = "http://192.168.100.170/pdc60-final/class-students.php";
         private string classId;
         public AddAttendance(string classId)
         {

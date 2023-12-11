@@ -15,8 +15,8 @@ namespace PDC60_FinalProject
     public partial class EditHistory : ContentPage
     {
         private string historyId;
-        public const string history_searchID = "http://172.26.80.1/pdc60-final/history-searchID.php";
-        public const string history_update = "http://172.26.80.1/pdc60-final/history-update.php";
+        public const string history_searchID = "http://192.168.100.170/pdc60-final/history-searchID.php";
+        public const string history_update = "http://192.168.100.170/pdc60-final/history-update.php";
         public EditHistory(string historyID)
         {
             InitializeComponent();

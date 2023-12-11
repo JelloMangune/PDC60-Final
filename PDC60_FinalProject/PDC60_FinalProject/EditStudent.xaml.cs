@@ -27,8 +27,8 @@ namespace PDC60_FinalProject
     public partial class EditStudent : ContentPage
     {
         private string studentId;
-        public const string student_searchid = "http://172.26.80.1/pdc60-final/student-searchID.php";
-        public const string student_update = "http://172.26.80.1/pdc60-final/student-update.php";
+        public const string student_searchid = "http://192.168.100.170/pdc60-final/student-searchID.php";
+        public const string student_update = "http://192.168.100.170/pdc60-final/student-update.php";
         public EditStudent(string studentId)
         {
             InitializeComponent();

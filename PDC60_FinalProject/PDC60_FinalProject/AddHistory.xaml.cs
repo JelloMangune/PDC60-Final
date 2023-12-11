@@ -20,7 +20,7 @@ namespace PDC60_FinalProject
     public partial class AddHistory : ContentPage
     {
         private string studentId;
-        public const string history_add = "http://172.26.80.1/pdc60-final/history-add.php";
+        public const string history_add = "http://192.168.100.170/pdc60-final/history-add.php";
         public AddHistory(string studentId)
         {
             InitializeComponent();

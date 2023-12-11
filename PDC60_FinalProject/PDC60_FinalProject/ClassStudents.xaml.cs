@@ -14,9 +14,9 @@ namespace PDC60_FinalProject
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ClassStudents : ContentPage
     {
-        public const string class_update = "http://172.26.80.1/pdc60-final/class-students.php";
-        public const string student_delete = "http://172.26.80.1/pdc60-final/student-delete.php";
-        public const string student_search = "http://172.26.80.1/pdc60-final/student-search.php";
+        public const string class_update = "http://192.168.100.170/pdc60-final/class-students.php";
+        public const string student_delete = "http://192.168.100.170/pdc60-final/student-delete.php";
+        public const string student_search = "http://192.168.100.170/pdc60-final/student-search.php";
         private string classId;
         public ClassStudents(string classId, string className)
         {

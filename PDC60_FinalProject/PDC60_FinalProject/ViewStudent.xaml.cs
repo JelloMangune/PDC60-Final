@@ -16,11 +16,11 @@ namespace PDC60_FinalProject
     public partial class ViewStudent : ContentPage
     {
         private string studentId;
-        public const string student_searchid = "http://172.26.80.1/pdc60-final/student-searchID.php";
-        public const string history_search = "http://172.26.80.1/pdc60-final/history-search.php";
-        public const string history_delete = "http://172.26.80.1/pdc60-final/history-delete.php";
-        public const string attendance_read = "http://172.26.80.1/pdc60-final/attendance-read.php";
-        public const string attendance_delete = "http://172.26.80.1/pdc60-final/attendance-delete.php";
+        public const string student_searchid = "http://192.168.100.170/pdc60-final/student-searchID.php";
+        public const string history_search = "http://192.168.100.170/pdc60-final/history-search.php";
+        public const string history_delete = "http://192.168.100.170/pdc60-final/history-delete.php";
+        public const string attendance_read = "http://192.168.100.170/pdc60-final/attendance-read.php";
+        public const string attendance_delete = "http://192.168.100.170/pdc60-final/attendance-delete.php";
         
         public ViewStudent(string studentId)
         {

@@ -13,7 +13,7 @@ namespace PDC60_FinalProject
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddStudent : ContentPage
     {
-        public const string student_add= "http://172.26.80.1/pdc60-final/student-add.php";
+        public const string student_add= "http://192.168.100.170/pdc60-final/student-add.php";
         private string classId;
         public AddStudent(string classId)
         {

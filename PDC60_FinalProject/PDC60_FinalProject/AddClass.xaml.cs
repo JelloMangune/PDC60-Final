@@ -14,7 +14,7 @@ namespace PDC60_FinalProject
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddClass : ContentPage
     {
-        public const string class_add = "http://172.26.80.1/pdc60-final/class-add.php";
+        public const string class_add = "http://192.168.100.170/pdc60-final/class-add.php";
         public AddClass()
         {
             InitializeComponent();
