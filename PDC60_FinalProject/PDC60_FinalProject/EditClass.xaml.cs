@@ -27,8 +27,8 @@ namespace PDC60_FinalProject
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditClass : ContentPage
     {
-        public const string class_searchid = "http://192.168.100.170/pdc60-final/class-searchID.php";
-        public const string class_update = "http://192.168.100.170/pdc60-final/class-update.php";
+        public const string class_searchid = "http://172.26.80.1/pdc60-final/class-searchID.php";
+        public const string class_update = "http://172.26.80.1/pdc60-final/class-update.php";
 
         private string classId;
 

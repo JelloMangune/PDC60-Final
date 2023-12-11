@@ -16,11 +16,11 @@ namespace PDC60_FinalProject
     public partial class ViewStudent : ContentPage
     {
         private string studentId;
-        public const string student_searchid = "http://192.168.100.170/pdc60-final/student-searchID.php";
-        public const string history_search = "http://192.168.100.170/pdc60-final/history-search.php";
-        public const string history_delete = "http://192.168.100.170/pdc60-final/history-delete.php";
-        public const string attendance_read = "http://192.168.100.170/pdc60-final/attendance-read.php";
-        public const string attendance_delete = "http://192.168.100.170/pdc60-final/attendance-delete.php";
+        public const string student_searchid = "http://172.26.80.1/pdc60-final/student-searchID.php";
+        public const string history_search = "http://172.26.80.1/pdc60-final/history-search.php";
+        public const string history_delete = "http://172.26.80.1/pdc60-final/history-delete.php";
+        public const string attendance_read = "http://172.26.80.1/pdc60-final/attendance-read.php";
+        public const string attendance_delete = "http://172.26.80.1/pdc60-final/attendance-delete.php";
         
         public ViewStudent(string studentId)
         {
@@ -82,11 +82,17 @@ namespace PDC60_FinalProject
 
                 if (result.status)
                 {
+                    // Clear existing items in the ListView
+                    AcademicHistoryListView.ItemsSource = null;
+
                     // Set the ItemsSource of the ListView to the list of academic history
                     AcademicHistoryListView.ItemsSource = result.academic_history;
                 }
                 else
                 {
+                    // Clear the ListView if no academic history is found
+                    AcademicHistoryListView.ItemsSource = null;
+
                     // Handle case where no academic history is found
                     // You might want to display an error message or handle it based on your requirements
                 }
@@ -105,7 +111,14 @@ namespace PDC60_FinalProject
 
         private async void OnEditClicked(object sender, EventArgs e)
         {
-            
+            var menuItem = (MenuItem)sender;
+            var selectedAcademicHistory = (AcademicHistoryItem)menuItem.CommandParameter;
+
+            if (selectedAcademicHistory != null)
+            {
+                // Navigate to the EditHistory page and pass the history_id as a parameter
+                await Navigation.PushAsync(new EditHistory(selectedAcademicHistory.id));
+            }
         }
 
         private async void OnDeleteClicked(object sender, EventArgs e)
@@ -154,8 +167,6 @@ namespace PDC60_FinalProject
                     {
                         // Academic history deleted successfully
                         await DisplayAlert("Success", "Academic history deleted successfully", "OK");
-
-                        // Refresh the academic history data after deletion
                         FetchAcademicHistory();
                     }
                     else

@@ -14,7 +14,7 @@ namespace PDC60_FinalProject
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-        public const string admin_login = "http://192.168.100.170/pdc60-final/admin-login.php";
+        public const string admin_login = "http://172.26.80.1/pdc60-final/admin-login.php";
         public LoginPage()
         {
             InitializeComponent();

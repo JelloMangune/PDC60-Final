@@ -11,8 +11,8 @@ namespace PDC60_FinalProject
 {
     public partial class MainPage : ContentPage
     {
-        public const string class_retrieve = "http://192.168.100.170/pdc60-final/class-readall.php";
-        public const string class_delete = "http://192.168.100.170/pdc60-final/class-delete.php";
+        public const string class_retrieve = "http://172.26.80.1/pdc60-final/class-readall.php";
+        public const string class_delete = "http://172.26.80.1/pdc60-final/class-delete.php";
         private Label errorLabel;
 
         public MainPage()

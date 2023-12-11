@@ -35,7 +35,7 @@
                     <DataTemplate>
                         <TextCell TextColor="White" Text="{Binding school}" Detail="{Binding history}">
                             <TextCell.ContextActions>
-                                <MenuItem Text="Edit" Clicked="OnEditClicked"/>
+                                <MenuItem Text="Edit" Clicked="OnEditClicked" CommandParameter="{Binding .}"/>
                                 <MenuItem Text="Delete" Clicked="OnDeleteClicked" CommandParameter="{Binding .}"/>
                             </TextCell.ContextActions>
                         </TextCell>
